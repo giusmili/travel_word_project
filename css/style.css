@@ -1,0 +1,409 @@
+/*reset css*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.6rem 'Raleway',sans-serif;
+    margin: 0;
+    background-color: #f1f1f1;
+    line-height: 1.6;
+    text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,p,ul,ol, figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 200;
+}
+*{
+    box-sizing: border-box;
+}
+img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+button, input[type="submit"]{
+    padding: 0;
+    background-color: transparent;
+    font-size: inherit;
+    border: 0;
+}
+input,textarea{
+    border: 0;
+
+}
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #000 #FFF;
+}
+*::-webkit-scrollbar {
+    width: .6rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 91, 91);
+    outline: thin solid #222;
+}
+
+/*theme*/
+:root{
+   --bgc-header: #fff;
+   --bgc-main: #f1f1f1;
+   --bgc-sidebar-button: #000000;
+   --bgc-logo:  #f44336;
+   --border-color: #ccc;
+}
+header h1{
+    font-weight: 400;
+    line-height: 5.5rem;
+    color: var(--bgc-logo);
+    border-bottom: solid .1rem var(--border-color);
+}
+.main-section{
+    display: grid;
+    background:  #222 url(../asset/london2.jpg)no-repeat scroll center center / cover;
+    max-width: 150.0rem;
+    height: 70vh;
+    margin: 0 auto;
+    align-items: center;
+}
+.main-section nav{
+    width: 90rem;
+    background-color: var(--bgc-main);
+    margin: auto;
+    
+}
+.main-section nav ul{
+    font-size: 0;
+    background-color: var(--bgc-sidebar-button);
+    display: flex;
+    direction: row;
+}
+.main-section nav ul li .material-icons{
+    vertical-align: -.3rem;
+    margin-right: .3rem;
+   
+}
+.main-section nav ul li, .main-section nav ul a{
+    font-size: 1.6rem;
+    color: var(--bgc-main);
+    display: inline-block;
+   
+    
+}
+.main-section nav ul a{
+    padding: .4rem 1rem;
+}
+.main-section nav ul li{
+    flex-basis: 1;
+    
+}
+.main-section nav ul li .active{
+    background-color: var(--bgc-logo);
+}
+.main-section fieldset{
+    border: none;
+}
+.main-section fieldset legend{
+    font-size: x-large;
+    line-height: 6.5rem;
+}
+.main-section fieldset form{
+    text-align: center;
+}
+
+.main-section fieldset form .form{
+    display: inline-block;
+    width: calc(100% / 2 - 2rem);
+    
+    
+}
+.main-section fieldset form .form label{
+    display: block;
+    text-align: left;
+    text-transform: capitalize;
+}
+.main-section fieldset form .form:nth-child(1){
+    margin-right: 2rem;
+}
+.main-section fieldset form .form input{
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border: solid .1rem var(--border-color);
+}
+.main-section fieldset form input[type="submit"]{
+    display: block;
+    width: 20rem;
+    background-color: var(--bgc-sidebar-button);
+    color: #fff;
+    line-height: 3.5rem;
+    margin: 2rem 0 0 1rem;
+}
+
+/* grid offer */
+.grid-country-offer, 
+.grid-explore-offer,
+.grid-best-offer,
+.grid-contact-offer{
+    max-width: 110rem;
+    margin: 2rem auto;
+}
+.grid-country-offer h2,
+.grid-explore-offer h2,
+.grid-best-offer h2,
+.grid-contact-offer h2,
+.grid-explore-offer h4{
+    font-weight: 400;
+}
+
+.grid-country-offer p,
+.grid-explore-offer p,
+.grid-contact-offer p{
+    padding: .8rem 0;
+}
+.grid-country-offer ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.grid-country-offer ul li:nth-child(1){
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.grid-country-offer ul li figure{
+    position: relative;
+    cursor: pointer;
+   
+    
+}
+.grid-country-offer ul li figure figcaption{
+    position: absolute;
+    background-color: rgba(0, 0, 0,.5);
+    top: 0;
+    left : 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    color: var(--bgc-header);
+    font-size: 2rem;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    
+}
+.grid-country-offer ul li figure figcaption h4{
+    font-weight: 400;
+    
+}
+.grid-country-offer ul li figure:hover figcaption{
+    transform: scale(1);
+}
+
+/* grid explorer offer */
+.grid-explore-offer ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: var(--bgc-header);
+}
+.grid-explore-offer ul li figure figcaption{
+    padding: 1rem;  
+}
+.grid-explore-offer ul li figure figcaption h4{
+    font-size: x-large;
+    font-weight: 400;
+}
+.grid-explore-offer ul li figure figcaption p:last-child{
+    font-weight: 400;
+}
+.grid-explore-offer ul li figure figcaption button{
+   border: solid .1rem var(--border-color);
+   padding: 1rem;
+   cursor: pointer;
+   transition: all 500ms ease-in-out;
+}
+.grid-explore-offer ul li figure figcaption:hover button{
+    background-color: var(--border-color);
+}
+
+/*grid best offer */
+.grid-best-offer{
+    background-color: var(--bgc-sidebar-button);
+    
+}
+.grid-best-offer h2, 
+.grid-best-offer p,.grid-best-offer fieldset legend{
+    color: var(--bgc-header);
+    
+}
+.grid-best-offer h2, .grid-best-offer p{
+    padding:0 0 0 1.5rem;
+    font-weight: 300;
+}
+.grid-best-offer p{
+    margin-top: 1rem;
+}
+.grid-best-offer p,.grid-best-offer fieldset{
+    border: solid .1rem transparent;
+}
+.grid-best-offer fieldset legend{
+    display: none;
+}
+.grid-best-offer fieldset form label{
+    color: var(--bgc-header);
+}
+.grid-best-offer fieldset form *{
+    display: block;
+    width: 100%;
+    line-height: 3.5rem;
+    font-size: inherit;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+.grid-best-offer fieldset form input[type="email"]{
+    color:rgb(92, 91, 91);
+    transition: all .6s ease-in-out;
+}
+.grid-best-offer fieldset form input[placeholder]:focus{
+    outline: solid .1rem transparent;
+    box-shadow: 0 0 2rem var(--bgc-logo);
+}
+.grid-best-offer fieldset form input[type="submit"], 
+.grid-contact-offer input[type="submit"]{
+    background-color: var(--bgc-logo);
+    width: 10rem;
+    color: var(--bgc-header);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* form contact */
+.grid-contact-offer ul li .material-icons{
+    vertical-align: -.6rem;
+    margin-right: .5rem;
+   
+}
+.grid-contact-offer ul{
+
+    padding-top: 1rem;
+    line-height: 3.5rem;
+}
+.grid-contact-offer form *{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    line-height: 3.5rem;
+    padding: .4rem;
+    transition-duration: 0.6s;
+}
+.grid-contact-offer form [placeholder]{
+    font-size: inherit;
+}
+.grid-contact-offer form textarea{
+    resize: none;
+}
+.grid-contact-offer form input:focus, .grid-contact-offer form textarea:focus{
+    outline: solid .1rem transparent;
+    box-shadow: 0 0 1rem var(--bgc-logo);
+}
+.grid-contact-offer input[type="submit"]{
+    display: block;
+    width: 20rem;
+    background-color: var(--bgc-sidebar-button);
+    text-transform: uppercase;
+    
+}
+
+/*footer*/
+footer{
+    margin-top: 2rem;
+}
+footer *{
+    text-align: center;
+}
+footer ul{
+    width: 13.0rem;
+    margin: 2rem auto;
+    font-size: 0;
+}
+footer ul li{
+    text-align: left;
+    font-size: inherit;
+    display: inline-block;
+    width: calc(100% / 4 - 1rem);
+    margin-right: 1rem;
+}
+footer ul li a{
+    display: block;
+    width: 100%;
+}
+/* responsive */
+@media screen and (max-width: 60rem) {
+    main{
+        padding: 1rem;
+    }
+    .main-section{
+        display: none;
+    }
+    .grid-country-offer ul li:nth-child(1){
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+    .grid-country-offer ul, .grid-explore-offer ul{
+        
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .grid-contact-offer input[type="submit"],.grid-best-offer fieldset form input[type="submit"]{
+        width: 100%;
+    }
+    
+}
+@media screen and (orientation: landscape) {
+    main{
+        padding: 0;
+    }
+   
+    section{
+        padding:0 1rem;
+    }
+    
+    .main-section{
+        display: grid;
+      
+    }
+   
+    
+    .grid-country-offer ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .grid-country-offer ul li:nth-child(1){
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .grid-explore-offer ul{
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        
+    }
+    .grid-contact-offer input[type="submit"],.grid-best-offer fieldset form input[type="submit"]{
+        width: 20%;
+    }
+    
+}
