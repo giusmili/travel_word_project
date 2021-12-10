@@ -433,5 +433,9 @@ footer ul li a{
         width: 20rem;
         margin: 2rem 0 0 1rem;
     }
+    section{
+        padding: 0;
+        
+    }
     
 }
