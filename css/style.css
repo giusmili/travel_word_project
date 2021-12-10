@@ -350,6 +350,7 @@ footer ul li a{
     display: block;
     width: 100%;
 }
+
 /* responsive */
 @media screen and (max-width: 60rem) {
     main{
@@ -379,12 +380,20 @@ footer ul li a{
    
     section{
         padding:0 1rem;
+        
     }
     
     .main-section{
         display: grid;
-      
+        width: 100vw;
     }
+    .main-section nav{
+        width: auto;
+        background-color: var(--bgc-main);
+        margin: auto;
+        
+    }
+
    
     
     .grid-country-offer ul{
@@ -404,6 +413,15 @@ footer ul li a{
     }
     .grid-contact-offer input[type="submit"],.grid-best-offer fieldset form input[type="submit"]{
         width: 20%;
+    }
+    
+}
+@media  screen and (min-width: 120rem) {
+    .main-section nav{
+        width: 80rem;
+        background-color: var(--bgc-main);
+        margin: auto;
+        
     }
     
 }
