@@ -308,6 +308,7 @@ header h1{
     line-height: 3.5rem;
     padding: .4rem;
     transition-duration: 0.6s;
+    border: solid .1rem #ccc;
 }
 .grid-contact-offer form [placeholder]{
     font-size: inherit;
@@ -323,7 +324,8 @@ header h1{
     display: block;
     width: 20rem;
     background-color: var(--bgc-sidebar-button);
-    text-transform: uppercase;
+    text-transform: uppercase;border: 0;
+
     
 }
 
@@ -414,6 +416,10 @@ footer ul li a{
     .grid-contact-offer input[type="submit"],.grid-best-offer fieldset form input[type="submit"]{
         width: 30%;
     }
+    .main-section fieldset form input[type="submit"]{
+        width: 100%;
+        margin: 1rem 0 0;
+    }
     
 }
 @media  screen and (min-width: 120rem) {
@@ -422,6 +428,10 @@ footer ul li a{
         background-color: var(--bgc-main);
         margin: auto;
         
+    }
+    .main-section fieldset form input[type="submit"]{
+        width: 20rem;
+        margin: 2rem 0 0 1rem;
     }
     
 }
