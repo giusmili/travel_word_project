@@ -88,7 +88,7 @@ header h1{
     font-size: 0;
     background-color: var(--bgc-sidebar-button);
     display: flex;
-    direction: row;
+    flex-direction: row;
 }
 .main-section nav ul li .material-icons{
     vertical-align: -.3rem;
@@ -106,7 +106,7 @@ header h1{
     padding: .4rem 1rem;
 }
 .main-section nav ul li{
-    flex-basis: 1;
+    flex-basis: auto; 
     
 }
 .main-section nav ul li .active{

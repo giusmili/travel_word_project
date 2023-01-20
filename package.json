@@ -1,0 +1,23 @@
+{
+  "name": "2-travel_agency",
+  "version": "1.0.0",
+  "description": "![travel image](./asset/london2.jpg)\r [voir la maquette](https://giusmili.github.io/travel_word_project/)\r &copy; Powered by GiusMili - 2021",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel --no-babelrc src -w -d js --preset=env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giusmili/travel_word_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giusmili/travel_word_project/issues"
+  },
+  "homepage": "https://github.com/giusmili/travel_word_project#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

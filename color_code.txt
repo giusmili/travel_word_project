@@ -1,5 +1,0 @@
-color logo, nav : #f44336
-sidebar: #000000 and button
-submit : #616161
-bgc: #f1f1f1
-Font: https://fonts.googleapis.com/css?family=Raleway
